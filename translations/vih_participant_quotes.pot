@@ -1,0 +1,183 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  vih_participant_quotes.features.field.inc: n/a
+#  vih_participant_quotes.views_default.inc: n/a
+#  vih_participant_quotes.features.inc: n/a
+#  vih_participant_quotes.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-10-09 13:40+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: vih_participant_quotes.features.field.inc:257
+msgid "Billede"
+msgstr ""
+
+#: vih_participant_quotes.features.field.inc:258
+msgid "Body"
+msgstr ""
+
+#: vih_participant_quotes.features.field.inc:259 vih_participant_quotes.views_default.inc:624
+msgid "Kursustype"
+msgstr ""
+
+#: vih_participant_quotes.features.inc:30
+msgid "Citater"
+msgstr ""
+
+#: vih_participant_quotes.features.inc:32
+msgid "Citater fra tidligere kursister."
+msgstr ""
+
+#: vih_participant_quotes.features.inc:34
+msgid "Navn"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:595
+msgid "Master"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:596
+msgid "Hvad siger de tidligere kursister?"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:597
+msgid "mere"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:598
+msgid "Udfør"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:599
+msgid "Gendan"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:600
+msgid "Sortér efter"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:601
+msgid "Stigende"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:602
+msgid "Faldende"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:603
+msgid "Elementer pr. side"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:604
+msgid "- Alle -"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:605
+msgid "Forskydning"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:606
+msgid "« første"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:607
+msgid "‹ forrige"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:608
+msgid "næste ›"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:609
+msgid "sidste »"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:610
+msgid "Alle"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:611
+msgid "Blok"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:612
+msgid "Blok - context"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:613
+msgid "Used for the quotes on the individual courses."
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:614
+msgid "term"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:615
+msgid "Blok - slideshow"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:616
+msgid "Used for a slideshow with quotes on the individual courses."
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:617
+msgid "Blok quicksand"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:618
+msgid "Used on the overview page"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:619
+msgid "Blok - term page"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:620
+msgid "Used for the term page."
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:621
+msgid "Content pane"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:622
+msgid "Kursistcitater"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:623
+msgid "Titel"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:625
+msgid "View panes"
+msgstr ""
+
+#: vih_participant_quotes.views_default.inc:626
+msgid "Side"
+msgstr ""
+
+#: vih_participant_quotes.info:0
+msgid "VIH Participant Quotes"
+msgstr ""
+
+#: vih_participant_quotes.info:0
+msgid "Holds quotes from participants on short courses"
+msgstr ""
+
+#: vih_participant_quotes.info:0
+msgid "VIH"
+msgstr ""
+
