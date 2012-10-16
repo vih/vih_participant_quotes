@@ -3,7 +3,7 @@ description = Holds quotes from participants on short courses
 core = 7.x
 package = VIH
 php = 5.2.4
-version = 7.x-0.7
+version = 7.x-0.5
 project = vih_participant_quotes
 dependencies[] = ctools
 dependencies[] = features
@@ -14,7 +14,7 @@ dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
 dependencies[] = vih_short_course
-datestamp = 1331278554
+datestamp = 1346221374
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
@@ -30,10 +30,3 @@ features[variable][] = node_options_citater
 features[variable][] = node_preview_citater
 features[variable][] = node_submitted_citater
 features[views_view][] = participant_quotes
-
-
-; Information added by drush on 2012-08-29
-version = "unknown"
-project = "vih"
-datestamp = "1346221374"
-
