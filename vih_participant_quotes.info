@@ -2,7 +2,6 @@ name = VIH Participant Quotes
 description = Holds quotes from participants on short courses
 core = 7.x
 package = VIH
-php = 5.2.4
 version = 7.x-0.5
 project = vih_participant_quotes
 dependencies[] = ctools
