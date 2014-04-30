@@ -53,7 +53,7 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['grouping'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Felt: Indhold: Billede */
+  /* Field: Content: Billede */
   $handler->display->display_options['fields']['field_profile_picture']['id'] = 'field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['table'] = 'field_data_field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['field'] = 'field_profile_picture';
@@ -64,18 +64,18 @@ function vih_participant_quotes_views_default_views() {
     'image_style' => 'thumbnail_tall_employee',
     'image_link' => 'content',
   );
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sorteringskriterie: Global: Random seed */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['random_seed']['id'] = 'random_seed';
   $handler->display->display_options['sorts']['random_seed']['table'] = 'views';
   $handler->display->display_options['sorts']['random_seed']['field'] = 'random_seed';
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID */
+  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -94,14 +94,14 @@ function vih_participant_quotes_views_default_views() {
     'short_course_type' => 'short_course_type',
   );
   $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'ignore';
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -128,7 +128,7 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Forbindelse: Indhold: Taksonomitermer på node */
+  /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
@@ -141,7 +141,7 @@ function vih_participant_quotes_views_default_views() {
     'subject_packages' => 0,
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID */
+  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -163,7 +163,7 @@ function vih_participant_quotes_views_default_views() {
   );
   $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'tids';
   $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -176,14 +176,14 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -233,21 +233,12 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '5000';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['speed'] = '700';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['delay'] = '0';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['start_paused'] = 0;
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['remember_slide_days'] = '1';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '1';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Billede */
+  /* Field: Content: Billede */
   $handler->display->display_options['fields']['field_profile_picture']['id'] = 'field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['table'] = 'field_data_field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['field'] = 'field_profile_picture';
@@ -258,7 +249,7 @@ function vih_participant_quotes_views_default_views() {
     'image_style' => 'thumbnail_tall_employee',
     'image_link' => 'content',
   );
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -266,7 +257,7 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID */
+  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -287,7 +278,7 @@ function vih_participant_quotes_views_default_views() {
     'short_course_type' => 'short_course_type',
   );
   $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -300,14 +291,14 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -338,7 +329,7 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Billede */
+  /* Field: Content: Billede */
   $handler->display->display_options['fields']['field_profile_picture']['id'] = 'field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['table'] = 'field_data_field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['field'] = 'field_profile_picture';
@@ -349,14 +340,14 @@ function vih_participant_quotes_views_default_views() {
     'image_style' => 'thumbnail_tall_employee',
     'image_link' => 'content',
   );
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Felt: Indhold: Alle taksonomitermer */
+  /* Field: Content: All taxonomy terms */
   $handler->display->display_options['fields']['term_node_tid']['id'] = 'term_node_tid';
   $handler->display->display_options['fields']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['fields']['term_node_tid']['field'] = 'term_node_tid';
@@ -383,7 +374,7 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '12';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID */
+  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -406,14 +397,14 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -465,7 +456,7 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Billede */
+  /* Field: Content: Billede */
   $handler->display->display_options['fields']['field_profile_picture']['id'] = 'field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['table'] = 'field_data_field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['field'] = 'field_profile_picture';
@@ -476,19 +467,19 @@ function vih_participant_quotes_views_default_views() {
     'image_style' => 'profile_small',
     'image_link' => 'content',
   );
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Felt: Indhold: Kursustype */
+  /* Field: Content: Kursustype */
   $handler->display->display_options['fields']['field_course_type']['id'] = 'field_course_type';
   $handler->display->display_options['fields']['field_course_type']['table'] = 'field_data_field_course_type';
   $handler->display->display_options['fields']['field_course_type']['field'] = 'field_course_type';
   $handler->display->display_options['fields']['field_course_type']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_course_type']['delta_offset'] = '0';
-  /* Felt: Indhold: Redigér-link */
+  /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
@@ -538,7 +529,7 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Indhold: Billede */
+  /* Field: Content: Billede */
   $handler->display->display_options['fields']['field_profile_picture']['id'] = 'field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['table'] = 'field_data_field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['field'] = 'field_profile_picture';
@@ -549,31 +540,31 @@ function vih_participant_quotes_views_default_views() {
     'image_style' => 'thumbnail',
     'image_link' => 'content',
   );
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Felt: Indhold: Kursustype */
+  /* Field: Content: Kursustype */
   $handler->display->display_options['fields']['field_course_type']['id'] = 'field_course_type';
   $handler->display->display_options['fields']['field_course_type']['table'] = 'field_data_field_course_type';
   $handler->display->display_options['fields']['field_course_type']['field'] = 'field_course_type';
   $handler->display->display_options['fields']['field_course_type']['delta_offset'] = '0';
-  /* Felt: Indhold: Redigér-link */
+  /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Felt: Indhold: Slet-link */
+  /* Field: Content: Delete link */
   $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['label'] = '';
   $handler->display->display_options['fields']['delete_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -594,7 +585,7 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '12';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID */
+  /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -654,6 +645,7 @@ function vih_participant_quotes_views_default_views() {
     t('sidste »'),
     t('Alle'),
     t('Blok'),
+    t('more'),
     t('Blok - context'),
     t('Used for the quotes on the individual courses.'),
     t('term'),
@@ -665,7 +657,7 @@ function vih_participant_quotes_views_default_views() {
     t('Used for the term page.'),
     t('Content pane'),
     t('Kursistcitater'),
-    t('Titel'),
+    t('Title'),
     t('Kursustype'),
     t('VIH Admin'),
     t('Side'),
