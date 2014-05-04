@@ -31,3 +31,5 @@ features[variable][] = node_options_citater
 features[variable][] = node_preview_citater
 features[variable][] = node_submitted_citater
 features[views_view][] = participant_quotes
+
+files[] = vih_participant_quotes.migrate.inc
