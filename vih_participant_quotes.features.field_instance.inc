@@ -128,7 +128,7 @@ function vih_participant_quotes_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'thumbnail_tall',
+          'image_style' => 'frontpage_slide_sidebar',
         ),
         'type' => 'image',
         'weight' => 0,
