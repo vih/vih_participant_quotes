@@ -34,5 +34,6 @@ function vih_participant_quotes_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
