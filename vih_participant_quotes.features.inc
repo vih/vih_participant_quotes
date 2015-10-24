@@ -26,11 +26,11 @@ function vih_participant_quotes_views_api($module = NULL, $api = NULL) {
 function vih_participant_quotes_node_info() {
   $items = array(
     'citater' => array(
-      'name' => t('Citater'),
+      'name' => t('Short Course Testimonial'),
       'base' => 'node_content',
-      'description' => t('Citater fra tidligere kursister.'),
+      'description' => t('Use <em>short course testimonial</em> for adding quotes about short courses.'),
       'has_title' => '1',
-      'title_label' => t('Navn'),
+      'title_label' => t('Name'),
       'help' => '',
     ),
   );
