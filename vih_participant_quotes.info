@@ -1,5 +1,5 @@
-name = VIH Participant Quotes
-description = Holds quotes from participants on short courses
+name = VIH Short Course Participant Testimonials
+description = Handles testimonials / quotes from participants on short courses
 core = 7.x
 package = VIH
 version = 7.x-0.5
