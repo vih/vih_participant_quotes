@@ -102,17 +102,17 @@ function vih_participant_quotes_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
 
-  /* Display: Blok */
-  $handler = $view->new_display('block', 'Blok', 'block');
+  /* Display: Blok - from category */
+  $handler = $view->new_display('block', 'Blok - from category', 'block');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '12';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['block_caching'] = '-1';
 
-  /* Display: Blok - context */
-  $handler = $view->new_display('block', 'Blok - context', 'block_context');
-  $handler->display->display_options['display_description'] = 'Used for the quotes on the individual courses.';
+  /* Display: Blok - grid context */
+  $handler = $view->new_display('block', 'Blok - grid context', 'block_context');
+  $handler->display->display_options['display_description'] = 'Used for the testimonials on the individual courses based on category.';
   $handler->display->display_options['defaults']['cache'] = FALSE;
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -185,10 +185,10 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['block_caching'] = '4';
 
-  /* Display: Blok - slideshow */
-  $handler = $view->new_display('block', 'Blok - slideshow', 'block_slideshow');
+  /* Display: Blok - from category not current */
+  $handler = $view->new_display('block', 'Blok - from category not current', 'block_slideshow');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['display_description'] = 'Used for a slideshow with quotes on the individual courses.';
+  $handler->display->display_options['display_description'] = 'Used for a single testimonial for the individual courses based on category.';
   $handler->display->display_options['defaults']['cache'] = FALSE;
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -199,8 +199,8 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'entity';
-  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Billede */
@@ -276,8 +276,8 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['block_caching'] = '-1';
 
-  /* Display: Blok quicksand */
-  $handler = $view->new_display('block', 'Blok quicksand', 'block_quicksand');
+  /* Display: Blok - categorised */
+  $handler = $view->new_display('block', 'Blok - categorised', 'block_quicksand');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['display_description'] = 'Used on the overview page';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -382,8 +382,8 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['block_caching'] = '4';
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: Admin pane */
+  $handler = $view->new_display('panel_pane', 'Admin pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Kursistcitater';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
@@ -456,8 +456,8 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['pane_category']['name'] = 'VIH Admin';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
-  /* Display: Side */
-  $handler = $view->new_display('page', 'Side', 'page_1');
+  /* Display: Admin page */
+  $handler = $view->new_display('page', 'Admin page', 'page_1');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '40';
@@ -544,8 +544,8 @@ function vih_participant_quotes_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
 
-  /* Display: Quotes Pane */
-  $handler = $view->new_display('panel_pane', 'Quotes Pane', 'panel_pane_2');
+  /* Display: Testimonials Category Pane */
+  $handler = $view->new_display('panel_pane', 'Testimonials Category Pane', 'panel_pane_2');
   $handler->display->display_options['defaults']['cache'] = FALSE;
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '518400';
@@ -609,23 +609,23 @@ function vih_participant_quotes_views_default_views() {
     t('Stigende'),
     t('Faldende'),
     t('Alle'),
-    t('Blok'),
+    t('Blok - from category'),
     t('more'),
-    t('Blok - context'),
-    t('Used for the quotes on the individual courses.'),
+    t('Blok - grid context'),
+    t('Used for the testimonials on the individual courses based on category.'),
     t('term'),
-    t('Blok - slideshow'),
-    t('Used for a slideshow with quotes on the individual courses.'),
-    t('Blok quicksand'),
+    t('Blok - from category not current'),
+    t('Used for a single testimonial for the individual courses based on category.'),
+    t('Blok - categorised'),
     t('Used on the overview page'),
     t('Blok - term page'),
     t('Used for the term page.'),
-    t('Content pane'),
+    t('Admin pane'),
     t('Kursistcitater'),
     t('Title'),
     t('Kursustype'),
     t('VIH Admin'),
-    t('Side'),
+    t('Admin page'),
     t('Elementer pr. side'),
     t('- Alle -'),
     t('Forskydning'),
@@ -633,7 +633,7 @@ function vih_participant_quotes_views_default_views() {
     t('‹ forrige'),
     t('næste ›'),
     t('sidste »'),
-    t('Quotes Pane'),
+    t('Testimonials Category Pane'),
     t('VIH Short Course'),
   );
   $export['participant_quotes'] = $view;
